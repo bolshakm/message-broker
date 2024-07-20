@@ -11,15 +11,9 @@ import java.util.*;
 @Service
 public class UserService {
 
-    private final TopicService topicService;
-
     private Map<String, User> users = new HashMap<>() {{
         put("admin", new User("admin", "1234"));
     }};
-
-    public UserService(final TopicService topicService) {
-        this.topicService = topicService;
-    }
 
     public Set<String> getAll() {
         return new TreeSet<>(users.keySet());
