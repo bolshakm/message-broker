@@ -14,8 +14,7 @@ public class AdvancedController extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<Object> handleException(RuntimeException ex) {
-//        LOG.error(ex.printStackTrace());
-        ex.printStackTrace();
+        LOG.error(ex.getMessage());
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 }

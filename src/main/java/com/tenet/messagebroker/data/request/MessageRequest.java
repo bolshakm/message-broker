@@ -1,4 +1,4 @@
-package com.tenet.messagebroker.data;
+package com.tenet.messagebroker.data.request;
 
 public class MessageRequest {
 

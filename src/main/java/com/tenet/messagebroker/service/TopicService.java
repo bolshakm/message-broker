@@ -10,7 +10,9 @@ import java.util.*;
 public class TopicService {
 
     private Map<String, Topic> topics = new HashMap<>(){{
-        put("def", new Topic("def"));
+        put("default", new Topic("default"));
+        put("programming", new Topic("programming"));
+        put("friends", new Topic("friends"));
     }};
 
     public Set<String> create(String name) {

@@ -20,12 +20,12 @@ public class TopicController {
     }
 
     @GetMapping
-    public ResponseEntity<Set<String>> getAll(){
+    public ResponseEntity<Set<String>> getAll() {
         return ResponseEntity.ok(topicService.getAll());
     }
 
     @PostMapping
-    public ResponseEntity<Set<String>> create(String name){
+    public ResponseEntity<Set<String>> create(String name) {
         return ResponseEntity.ok(topicService.create(name));
     }
 

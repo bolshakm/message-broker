@@ -1,6 +1,6 @@
 package com.tenet.messagebroker.service;
 
-import com.tenet.messagebroker.data.MessageRequest;
+import com.tenet.messagebroker.data.request.MessageRequest;
 import com.tenet.messagebroker.model.Message;
 import org.springframework.stereotype.Service;
 

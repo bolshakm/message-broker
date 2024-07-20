@@ -1,10 +1,13 @@
 package com.tenet.messagebroker.controller;
 
-import com.tenet.messagebroker.data.UserLoginRequest;
+import com.tenet.messagebroker.data.request.UserLoginRequest;
 import com.tenet.messagebroker.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Set;
 
@@ -25,11 +28,6 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<String> auth(@RequestBody UserLoginRequest request) {
-        return ResponseEntity.ok(userService.auth(request));
+        return userService.auth(request);
     }
-
-//    @PutMapping
-//    public ResponseEntity<String> useTopic(@RequestBody String topicName) {
-//        return ResponseEntity.ok(userService.useTopic(topicName));
-//    }
 }
