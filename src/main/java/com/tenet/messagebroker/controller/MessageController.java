@@ -38,7 +38,7 @@ public class MessageController {
             return ResponseEntity.badRequest().build();
         }
 
-        LOG.info("Message from {}, topic {}, text: {}", request.getLogin(), request.getTopicName(), request.getText());
+        LOG.info("Message time {}, from {}, topic {}, text: {}", LocalDateTime.now(), request.getLogin(), request.getTopicName(), request.getText());
         return ResponseEntity.ok(messageService.post(request));
 
     }
